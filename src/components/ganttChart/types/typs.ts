@@ -5,7 +5,7 @@ export interface Task {
   start_date: string;
   finished_date: string;
   assigned: string;
-  "%_complete": string; // Will be parsed to number
+  complete: string; // Will be parsed to number
   priority: string;
   actual_hour: string;
   planned_hour: string;

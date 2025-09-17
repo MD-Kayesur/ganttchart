@@ -1,0 +1,4 @@
+.wx-gantt-task-row.active {
+  background-color: #FDE68A !important; /* amber-200 background */
+  border-left: 4px solid #F59E0B;       /* amber-500 border on left */
+}
