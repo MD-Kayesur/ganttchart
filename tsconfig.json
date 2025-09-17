@@ -1,13 +1,33 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
   "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",  // Cache for incremental builds
+    "target": "ES2020",  // Target ECMAScript 2020
+    "useDefineForClassFields": true,  // Use the class fields proposal
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],  // Standard JS & DOM types
+    "module": "ESNext",  // Enable the latest module system
+    "skipLibCheck": true,  // Skip checking libraries for type errors
+    "moduleResolution": "bundler",  // Resolves modules like a bundler (Webpack/Vite)
+    "allowImportingTsExtensions": true,  // Allow importing TS files with extensions
+    "isolatedModules": true,  // Ensures that each file can be treated as an isolated module
+    "moduleDetection": "force",  // Force module detection in all cases
+    "noEmit": true,  // Don't emit output files (commonly used in bundler setups)
+    "jsx": "react-jsx",  // JSX Transformation (React 17+ JSX Transform)
+    
+    // Linting options
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    // Path mappings
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"]  // Aliases to use in imports
     }
-  }
+  },
+  "include": ["src"]  // Includes all TS files in the src folder
 }
+
+
+

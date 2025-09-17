@@ -57,6 +57,12 @@ const Navbar: React.FC = () => {
               Services
             </Link>
             <Link
+              to="/ganttchart"
+              className="text-white hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Ganttchart
+            </Link>
+            <Link
               to="/contact"
               className="text-white hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
             >

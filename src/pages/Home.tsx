@@ -1,17 +1,18 @@
-import CommonWrapper from "../common/CommonWrapper";
+ import CommonWrapper from "../common/CommonWrapper";
 import {
   decrement,
   increment,
   reset,
 } from "@/store/Slices/counterSlice/counterSlice";
 import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
-
-const Home = () => {
+ import "wx-react-gantt/dist/gantt.css";
+ const Home:React.FC = () => {
   const count = useAppSelector((state) => state.counter.value);
   const dispatch = useAppDispatch();
 
   return (
     <CommonWrapper>
+
       <div className="h-screen bg-website-color-lightGreen">
         <div className="flex flex-col items-center justify-center min-h-screen ">
           <h1 className="text-2xl font-bold mb-4">Home Page</h1>
@@ -38,6 +39,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+    
+     
+      
     </CommonWrapper>
   );
 };

@@ -10,6 +10,7 @@ import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import Form from "@/pages/Form";
 import Services from "@/pages/Services";
+import GanttChart from "@/pages/GanttChart";
 
 const routes = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const routes = createBrowserRouter([
       {
         path: "/services",
         element: <Services />,
+      },
+      {
+        path: "/ganttchart",
+        element: <GanttChart />,
       },
       {
         path: "/form",
