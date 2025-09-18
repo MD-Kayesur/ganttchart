@@ -1,4 +1,47 @@
-.wx-gantt-task-row.active {
-  background-color: #FDE68A !important; /* amber-200 background */
-  border-left: 4px solid #F59E0B;       /* amber-500 border on left */
+/* ============================================== */
+/* 🔑 1. CONTAINER STYLING */
+/* ============================================== */
+/* Ensure the overall component has a defined size */
+.gantt-willow-wrapper {
+    /* Set a height for the scrollbars to appear */
+    height: 800px; 
+    width: 100%;
 }
+
+/* ============================================== */
+/* 🔑 2. STRIPED GRID BACKGROUND (Left Side) */
+/* ============================================== */
+
+/* Target the left pane (Grid/Text columns) rows */
+.gantt-cell-container:nth-child(odd) {
+    /* Light gray background for odd rows */
+    background-color: #f7f7f7 !important; 
+}
+
+.gantt-cell-container:nth-child(even) {
+    /* White background for even rows */
+    background-color: white !important;
+}
+
+/* Ensure the timeline (right side) rows remain plain white */
+.gantt-timeline-row {
+    background-color: transparent !important; /* Important for seeing chart background */
+}
+
+/* ============================================== */
+/* 🔑 3. DUAL SCROLLBAR EMULATION (Limited) */
+/* ============================================== */
+/* wx-react-gantt typically puts both the grid and chart in one scroll container.
+   Making the grid portion non-scrollable requires complex CSS positioning (sticky/fixed)
+   which is not standard for this library. 
+   We keep the default scrolling behavior here.
+*/
+
+
+/* ============================================== */
+/* 🔑 4. TASK BAR STYLING (Type-based coloring requires CSS selectors) */
+/* ============================================== */
+/* Since we don't have custom components, task coloring in wx-react-gantt 
+   often relies on data attributes if the library adds them, or using 
+   the default color scheme. We'll use the default colors here. 
+*/
