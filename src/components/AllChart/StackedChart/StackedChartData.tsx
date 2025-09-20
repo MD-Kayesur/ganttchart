@@ -1,7 +1,8 @@
  
  
-// ডেটা সেট (ছবি থেকে অনুমান করে মানগুলো নেওয়া হয়েছে)
- export const employeeAttendanceData = [
+  
+
+ export const rawData = [
   { name: "Sunday", OnTime: 58, Late: 24, Absent: 18 },
   { name: "Monday", OnTime: 72, Late: 13, Absent: 15 },
   { name: "Tues day", OnTime: 40, Late: 30, Absent: 30 },
