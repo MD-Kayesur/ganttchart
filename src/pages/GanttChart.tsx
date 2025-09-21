@@ -1,37 +1,35 @@
- import ChartShowDynamic from "@/components/AllChart/ChartShowDynamic";
-import { StackedChart } from "@/components/AllChart/StackedChart/StackedChart";
-import WidgetConfiguration from "@/components/AllChart/WidgetConfiguration/WidgetConfiguration";
-import ImportExportButtons from "@/components/ganttChart/button/ImportExportButtons";
+//  import ChartShowDynamic from "@/components/AllChart/ChartShowDynamic";
+  import WidgetConfiguration from "@/components/AllChart/WidgetConfiguration/WidgetConfiguration";
+import DashboardBuilder from "@/components/AllChart/WidgetLibrary/WidgetLibrary";
+ import ImportExportButtons from "@/components/ganttChart/button/ImportExportButtons";
 import Component from "@/components/ganttChart/Component ";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
     
 const GanttChart:React.FC = () => {
-     const [ChartType,setChartType]=useState()
- 
-  const ChangeChart = (e: React.ChangeEvent<HTMLSelectElement>) => {
-     const selectedType = e.target.value;
-     
-      setChartType(selectedType);
-    console.log(selectedType);
-    }
+  const [config, setConfig] = useState<any>({
+    chartType: "",
+    widgetTitle: "",
+  });
 
     return (
-        <>
+      <>
+ 
+       <div>
 
-        <div>
- <ChartShowDynamic setChartType={setChartType}/>
-         </div>
-       <div className="flex gap-4 p-4">
-  {/* Chart section */}
-  <div className="flex-1 bg-white rounded-2xl shadow-md p-4">
-    <StackedChart  ChartType={ChartType}/>
-  </div>
+       
+        </div> 
 
-  {/* Widget config section */}
-  <div className="w-150 bg-white rounded-2xl shadow-md p-4">
-    <WidgetConfiguration ChangeChart={ChangeChart}/>
-  </div>
-</div>
+   <div className="flex gap-4 p-4">
+    <div className="w-4/6">
+    <DashboardBuilder chartType={config.chartType} widgetTitle={config.widgetTitle}></DashboardBuilder>
+      </div>
+       <div className="w-2/6">
+         <WidgetConfiguration onConfigChange={setConfig}  />
+      </div>
+
+       
+    </div>
        
 <div>
     <div className="flex justify-end"> <ImportExportButtons/></div>

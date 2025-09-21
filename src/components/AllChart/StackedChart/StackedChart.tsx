@@ -103,7 +103,7 @@ import {
 
 
   return (
-    <div className="p-6 mx-auto mt-8 bg-white rounded-xl shadow max-w-lg relative border border-gray-200">
+    <div className="p-6 mx-auto mt-8 bg-white rounded-xl shadow w-full  relative border border-gray-200">
        {isCopied && (
         <div className="absolute top-2 right-24 bg-green-500 text-white text-xs px-2 py-1 rounded-full z-10">
           Data Copied as CSV!
