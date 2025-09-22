@@ -1,12 +1,16 @@
-export interface PieChartDataItem {
+// ./types.ts
+
+// Define the structure for a single data entry in your pie chart
+export interface PieChartDataEntry {
   name: string;
   value: number;
   color: string;
-  icon?: string;
+  // You can add more properties as needed, e.g., 'id' for keying
 }
 
+// Define the props for your PieChartComponent
 export interface PieChartProps {
-  data?: PieChartDataItem[];
+  data?: PieChartDataEntry[];
   width?: string | number;
   height?: number;
   isDoughnut?: boolean;
@@ -16,8 +20,11 @@ export interface PieChartProps {
   showTooltip?: boolean;
   title?: string;
   subtitle?: string;
-  centerValue?: string | number;
+  centerValue?: string;
   centerLabel?: string;
   showPercentages?: boolean;
   animationDuration?: number;
+  onRemove?: () => void;
+  handleCopy: (data: PieChartDataEntry[]) => void; // Assuming handleCopy takes your data type
+  isCopied: boolean;
 }
