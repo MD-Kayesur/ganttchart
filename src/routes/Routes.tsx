@@ -10,9 +10,8 @@ import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import Form from "@/pages/Form";
 import Services from "@/pages/Services";
-import GanttChart from "@/pages/GanttChart";
-import { StackedChart } from "@/components/AllChart/StackedChart/StackedChart";
-import LineChart from "@/components/AllChart/LineChart/LineChart";
+ import LineChart from "@/components/AllChart/LineChart/LineChart";
+import Charts from "@/pages/Charts";
  
 const routes = createBrowserRouter([
   {
@@ -36,18 +35,12 @@ const routes = createBrowserRouter([
         element: <Services />,
       },
       // All Chart
+       
       {
-        path: "/ganttchart",
-        element: <GanttChart />,
+        path: "/charts",
+        element: <Charts />,
       },
-      {
-        path: "/stackedchart",
-        element: <StackedChart />,
-      },
-      {
-        path: "/linechart",
-        element: <LineChart />,
-      },
+       
       
 
       {

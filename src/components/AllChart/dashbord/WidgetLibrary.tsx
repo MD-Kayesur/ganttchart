@@ -1,7 +1,7 @@
 import React from "react";
 
 const WidgetLibrary = ({ widgets, handleWidgetDragStart }) => (
-  <div className="p-4">
+  <div className="p-4 overflow-auto">
     <h3 className="text-lg font-semibold text-gray-900 mb-2">
       Widget Library
     </h3>

@@ -22,7 +22,7 @@ const PieChartComponent: React.FC<PieChartProps> = ({
   centerLabel = "Total Users",
   showPercentages = true,
   animationDuration = 800,
-  onRemove,
+  onRemove ,
   handleCopy, isCopied 
 }) => {
   const [activeIndex, setActiveIndex] = useState(-1);

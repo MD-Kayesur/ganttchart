@@ -60,7 +60,7 @@ const MultiLineChart: React.FC<MultiLineChartProps> = ({
        <div  className="flex items-center gap-5">
          <div >
           <LuCopy
-          className="w-5 h-5 cursor-pointer hover:text-red-500"
+          className="w-5 h-5  cursor-pointer hover:text-red-500"
           onClick={() => handleCopy(defaultLineData) }
         />
 
@@ -74,7 +74,7 @@ const MultiLineChart: React.FC<MultiLineChartProps> = ({
 
 
         <RiDeleteBin6Line
-          className="w-5 h-5 cursor-pointer hover:text-red-500"
+          className="w-5 h-5  cursor-pointer hover:text-red-500"
           onClick={onRemove}
         />
        </div>
