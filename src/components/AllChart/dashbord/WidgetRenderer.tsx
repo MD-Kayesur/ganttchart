@@ -8,8 +8,16 @@ import PieChartComponent from "../PieChart/PieChartComponent";
 import MultiLineChart from "../MaltiLineChart/MultiLineChart";
 import RadarChartComponent from "../RadarChart/RadarChartComponent";
 import HorizontalBarChart from "../HorizontalBarChart/HorizontalBarChart";
+import DraggableCard from "../DraggableCard";
  
-const WidgetRenderer = ({ widget, onRemove,handleCopy ,  isCopied  }) => {
+const WidgetRenderer: React.FC<{ 
+    widget: Widget, 
+    onRemove: () => void, 
+    handleCopy: () => void, 
+    isCopied: boolean 
+}> = ({ widget, onRemove, handleCopy, isCopied }) => {
+    // ...
+ 
     const renderChart = () => {
         const type = widget.id.split("-")[0];
 
@@ -32,7 +40,7 @@ const WidgetRenderer = ({ widget, onRemove,handleCopy ,  isCopied  }) => {
                 return <HorizontalBarChart handleCopy={handleCopy} isCopied={isCopied}  onRemove={onRemove}/>
             default:
                 return (
-                    <div className="h-48 flex items-center justify-center text-gray-500">
+                    <div className="  border flex items-center justify-center text-gray-500">
                         
                         <p>
                             Widget: {widget.name} ({type}) - Component not found or default.
@@ -43,13 +51,18 @@ const WidgetRenderer = ({ widget, onRemove,handleCopy ,  isCopied  }) => {
     };
 
     return (
-        <div
-            className="bg-white rounded-lg border border-gray-200 shadow-sm relative p-2"
-            style={{ minHeight: "100px" }}
+        <DraggableCard>
+
+ <div
+            className="bg-white rounded-lg border border-gray-200   relative p-2"
+            style={{ minHeight: "100%" }}
         >
              
             <div className=" w-full">{renderChart()}</div>
         </div>
+
+        </DraggableCard>
+       
     );
 };
 

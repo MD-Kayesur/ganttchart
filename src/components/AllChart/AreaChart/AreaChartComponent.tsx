@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { ResponsiveContainer, AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import { areaChartData, GLOBEX_COLOR, OCEANIC_COLOR, yTicks } from './AreaChartData';
-import { yTickFormatter, copyDataToClipboard } from './AreaChartTooltip';
+import { yTickFormatter } from './AreaChartTooltip';
 import AreaChartHeader from './AreaChartHeader';
 import AreaChartLegend from './AreaChartLegend';
 
 interface Props {
     onRemove: () => void;
-}
+ }
 
 const AreaChartComponent: React.FC<Props> = ({ onRemove, handleCopy, isCopied }) => {
     const [showLineOnly, setShowLineOnly] = useState(false);
