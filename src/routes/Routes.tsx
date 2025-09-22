@@ -13,8 +13,7 @@ import Services from "@/pages/Services";
 import GanttChart from "@/pages/GanttChart";
 import { StackedChart } from "@/components/AllChart/StackedChart/StackedChart";
 import LineChart from "@/components/AllChart/LineChart/LineChart";
-import PieChart from "@/components/AllChart/PieChart/PieChart";
-
+ 
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -49,10 +48,7 @@ const routes = createBrowserRouter([
         path: "/linechart",
         element: <LineChart />,
       },
-      {
-        path: "/pieChart",
-        element: < PieChart />,
-      },
+      
 
       {
         path: "/form",

@@ -162,11 +162,11 @@ const Component: React.FC = () => {
   }, []);
 
   // 🗑️ Delete handler
-  const handleDeleteTask = (indexToDelete: number) => {
-    const updated = tasks.filter((_, index) => index !== indexToDelete);
-    setTasks(updated);
-    localStorage.setItem("importedCsvData", JSON.stringify(updated));
-  };
+  // const handleDeleteTask = (indexToDelete: number) => {
+  //   const updated = tasks.filter((_, index) => index !== indexToDelete);
+  //   setTasks(updated);
+  //   localStorage.setItem("importedCsvData", JSON.stringify(updated));
+  // };
 
   // 🛡️ Safe date parser
   const parseDate = (dateStr: string | undefined) => {
@@ -208,7 +208,7 @@ const Component: React.FC = () => {
       ) : (
         <>
           {/* ✅ Optional task deletion panel */}
-          <div className="mb-4 grid gap-2">
+          {/* <div className="mb-4 grid gap-2">
             {tasks.map((task, index) => (
               <div
                 key={index}
@@ -223,7 +223,7 @@ const Component: React.FC = () => {
                 </button>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* 📊 Gantt Chart */}
           <Willow className="gantt-willow-wrapper">

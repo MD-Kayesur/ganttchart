@@ -6,7 +6,7 @@ import LineChart from "./LineChart/LineChart";
 import PieChart from "./PieChart/PieChart";
 import AreaChart from "./AreaChart/AreaChart";
 import { StackedChart } from "./StackedChart/StackedChart";
-import RadarChart from "./RadarChart/RadarChart";
+import RadarChart from "./RadarChart/RadarChartComponent";
 import HeatmapComponent from "../AllChart/HatemapChart/HateMapChart";
 import MailtilineChart from "./MaltiLineChart/MailtilineChart";
 
